@@ -67,7 +67,7 @@ const BookDetails = () => {
       return;
     }
 
-    const response = await fetch('http://localhost:3001/add-to-cart', {
+    const response = await fetch('https://bookbyte-server.onrender.com/add-to-cart', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

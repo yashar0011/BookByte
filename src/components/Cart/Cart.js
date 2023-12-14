@@ -11,7 +11,7 @@ const CartPage = () => {
 
     const updateQuantity = async (bookName, quantity) => {
         try {
-            const response = await fetch('http://localhost:3001/cart/item', {
+            const response = await fetch('https://bookbyte-server.onrender.com/cart/item', {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ const CartPage = () => {
 
     const removeItemFromCart = async (bookName) => {
         try {
-            const response = await fetch('http://localhost:3001/cart/item', {
+            const response = await fetch('https://bookbyte-server.onrender.com/cart/item', {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -75,7 +75,7 @@ const CartPage = () => {
 
         const fetchCartItems = async () => {
             try {
-                const response = await fetch('http://localhost:3001/cart', {
+                const response = await fetch('https://bookbyte-server.onrender.com/cart', {
                     headers: {
                         'Authorization': `Bearer ${user.token}`
                     }

@@ -27,7 +27,7 @@ export const CartProvider = ({ children }) => {
                 body: JSON.stringify({ userId, bookId, quantity })
             };
 
-            const response = await fetch('http://localhost:3001/add-to-cart', requestOptions);
+            const response = await fetch('https://bookbyte-server.onrender.com/add-to-cart', requestOptions);
 
             if (response.ok) {
                 const result = await response.json();
@@ -44,7 +44,7 @@ export const CartProvider = ({ children }) => {
 
     const removeFromCart = async (userId, bookId) => {
         try {
-            const response = await fetch('http://localhost:3001/remove-from-cart', {
+            const response = await fetch('https://bookbyte-server.onrender.com/remove-from-cart', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ export const CartProvider = ({ children }) => {
 
     const clearCart = async () => {
         try {
-            const response = await fetch('http://localhost:3001/clear-cart', {
+            const response = await fetch('https://bookbyte-server.onrender.com/clear-cart', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -12,7 +12,7 @@ const AddressForm = () => {
         event.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:3001/add-address', {
+            const response = await fetch('https://bookbyte-server.onrender.com/add-address', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
